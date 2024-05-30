@@ -17,7 +17,7 @@ namespace customfinal
         }
         public int CurrentHealth
         {
-            
+            get { return _currentHealth; }
             set { _currentHealth = value; }
         }
         public int MaxHealth
