@@ -12,11 +12,12 @@ namespace customfinal
         private Bitmap _bitmap;
         private float _speed;
         private HealthPool _healthPool;
-        public Enemy(string name, Bitmap bitmap, float x, float y, float speed, HealthPool healthPool) : base(name, bitmap, x, y)
+        private int _damage;
+        public Enemy(string name, Bitmap bitmap, float x, float y, float speed, int damage, HealthPool healthPool) : base(name, bitmap, x, y)
         {
             _speed = speed;
             _healthPool = healthPool;
-
+            _damage = damage;
         }
         public override void Draw()
         {
