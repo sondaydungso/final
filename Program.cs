@@ -22,10 +22,11 @@ namespace customfinal
                 {
                     Enemy enemy = new Enemy("Enemy", SplashKit.BitmapNamed("Enemy"), 100, 100, 2, new HeathPool(1, 1));
                     //register enemy as a moveable, and will be moved by the movement manager
-                    MovementManager.AddMoveable(enemy);
+                    enemy.RegisterAsMoveable();
                     enemiesToSpawn--;
                 }
-
+                PowerUp powerUp = new PowerUpMovementSpeed("PowerUpSpeed", SplashKit.BitmapNamed("PowerUp"), 200, 200, 3, 5);
+                PowerUp powerUp1 = new PowerUpHeal("PowerUpHeal", SplashKit.BitmapNamed("PowerUp"), 200, 200, 3, 5);
 
                 //Move everything that can move
                 MovementManager.MoveAll();

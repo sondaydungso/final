@@ -48,6 +48,10 @@ namespace customfinal
             X += directionX * _speed;
             Y += directionY * _speed;
         }
+        public void RegisterAsMoveable()
+        {
+            MovementManager.AddMoveable(this);
+        }
 
         public HeathPool HealthPool
         {
@@ -55,11 +59,7 @@ namespace customfinal
             set { _healthPool = value; }
         }
 
-        public Bitmap Bitmap
-        {
-            get { return _bitmap; }
-            set { _bitmap = value; }
-        }
+        
         public float Speed
         {
             get { return _speed; }

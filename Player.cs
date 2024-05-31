@@ -12,11 +12,13 @@ namespace customfinal
         private Bitmap _bitmap;
         private float _speed;
         private HeathPool _healthPool;
-        public Player(string name, Bitmap bitmap, float x, float y, float speed, HeathPool healthPool) : base(name, bitmap, x, y)
+        private int _damage;
+        public Player(string name, Bitmap bitmap,int damage, float x, float y, float speed, HeathPool healthPool) : base(name, bitmap, x, y)
         {
             _speed = speed;
             _healthPool = healthPool;
             _bitmap = SplashKit.BitmapNamed("");// Add this after finish
+            _damage = damage;
             
         }
 
@@ -27,6 +29,10 @@ namespace customfinal
         public override void DestroySelf()
         {
            SplashKit.FreeBitmap(_bitmap);
+        }
+        public void RegisterAsMoveable()
+        {
+            MovementManager.AddMoveable(this);
         }
         public void Move()
         {
@@ -52,15 +58,16 @@ namespace customfinal
             get { return _healthPool; }
             set { _healthPool = value; }
         }
-        public Bitmap Bitmap
-        {
-            get { return _bitmap; }
-            set { _bitmap = value; }
-        }
+        
         public float Speed
         {
             get { return _speed; }
             set { _speed = value; }
+        }
+        public int Damage
+        {
+            get { return _damage; }
+            set { _damage = value; }
         }
     }
 }
