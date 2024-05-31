@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace customfinal
 {
-    public class Enemy : GameObject, IMoveable, IHurtable
+    public class Enemy : GameObject, IMoveable
     {
         private float _speed;
         private HealthPool _healthPool;

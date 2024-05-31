@@ -52,6 +52,12 @@ namespace customfinal
                 SplashKit.ProcessEvents();
                 SplashKit.ClearScreen();
 
+                //player shoot input check
+                if (SplashKit.KeyTyped(KeyCode.SpaceKey))
+                {
+                    MovementManager.Player.Shoot();
+                }
+
                 //Move everything that can move
                 MovementManager.MoveAll();
 

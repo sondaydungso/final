@@ -35,6 +35,7 @@ namespace customfinal
         }
         public void Move()
         {
+            // change the if else to switch statements
             if (SplashKit.KeyDown(KeyCode.WKey))
             {
                 Y -= _speed;
@@ -51,6 +52,14 @@ namespace customfinal
             {
                 X += _speed;
             }
+        }
+
+        public void Shoot()
+        {
+            //spawn fireball
+            Fireball fireball = new Fireball("fireball",
+                                             SplashKit.LoadBitmap("fireball", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Fireball.png"),
+                                             X, Y, 5, SplashKit.MouseX(), SplashKit.MouseY(), new HealthPool(1, 1));
         }
 
         public HealthPool HealthPool

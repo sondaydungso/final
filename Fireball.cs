@@ -7,7 +7,7 @@ using SplashKitSDK;
 
 namespace customfinal
 {
-    public class Fireball : GameObject, IMoveable, IHurtable
+    public class Fireball : GameObject, IMoveable
     {
        
         private float _speed;
@@ -18,15 +18,27 @@ namespace customfinal
         private float _playerX;
         private float _playerY;
         private HealthPool _healthPool;
+        private float _deltaX;
+        private float _deltaY;
+        private float _magnitude;
+        private float _normalisedX;
+        private float _normalisedY;
 
-        public Fireball(string name, Bitmap bitmap, float x, float y, float speed, float directionX, float directionY, HealthPool healthPool) : base(name, bitmap, x, y)
+        public Fireball(string name, Bitmap bitmap, float x, float y, float speed, float mouseDirectionX, float mouseDirectionY, HealthPool healthPool) : base(name, bitmap, x, y)
         {
             _speed = speed;
-            _directionX = directionX;
-            _directionY = directionY;
+             _deltaX = mouseX - X;
+             _deltaY = mouseY - Y;
+             _magnitude = MathF.Sqrt(_deltaX * _deltaX + _deltaY * _deltaY);
+             _normalisedX = _deltaX / _magnitude;
+             _normalisedY = _deltaY / _magnitude;
+            _directionX = mouseDirectionX;
+            _directionY = mouseDirectionY;
+
             _playerX = x;
             _playerY = y;
             _healthPool = healthPool;
+            
         }
         public override void Draw()
         {
@@ -38,19 +50,10 @@ namespace customfinal
         }
         public void Move() 
         {
-            float mouseX = SplashKit.MouseX();
-            float mouseY = SplashKit.MouseY();
-            float deltaX = mouseX - X;
-            float deltaY = mouseY - Y;
-            float distance = MathF.Sqrt(deltaX * deltaX + deltaY * deltaY);
-            if (distance == 0)
-            {
-                return;
-            }
-            float directionX = deltaX / distance;
-            float directionY = deltaY / distance;
-            X += directionX * _speed;
-            Y += directionY * _speed;
+            
+            
+            X +=  normalisedX * _speed;
+            Y += normalisedY * _speed;
         }
         public void Hurt(int damage)
         {
@@ -64,6 +67,26 @@ namespace customfinal
         {
             get { return _healthPool; }
             set { _healthPool = value; }
+        }
+        public float mouseX
+        {
+            get { return _mouseX; }
+            set { _mouseX = value; }
+        }
+        public float mouseY
+        {
+            get { return _mouseY; }
+            set { _mouseY = value; }
+        }
+        public float normalisedX
+        {
+            get { return _normalisedX; }
+            set { _normalisedX = value; }
+        }
+        public float normalisedY
+        {
+            get { return _normalisedY; }
+            set { _normalisedY = value; }
         }
         
     }
