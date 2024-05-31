@@ -28,10 +28,18 @@ namespace customfinal
         public void TakeDamage(int damage)
         {
             _currentHealth -= damage;
+            if (_currentHealth <= 0)
+            {
+                _currentHealth = 0;
+            }
         }
         public void Heal(int amount)
         {
             _currentHealth += amount;
+            if (_currentHealth > _maxHealth)
+            {
+                _currentHealth = _maxHealth;
+            }
         }
     }
 }

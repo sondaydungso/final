@@ -50,5 +50,10 @@ namespace customfinal
         //    get { return _health; }
         //    set { _health = value; }
         //}
+        public Collider Collider
+        {
+            get { return _collider; }
+            set { _collider = value; }
+        }
     }
 }
