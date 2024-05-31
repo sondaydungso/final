@@ -9,7 +9,6 @@ namespace customfinal
 {
     public class Player : GameObject, IMoveable
     {
-        private Bitmap _bitmap;
         private float _speed;
         private HealthPool _healthPool;
         private int _damage;
@@ -24,11 +23,11 @@ namespace customfinal
 
         public override void Draw()
         {
-            SplashKit.DrawBitmap(_bitmap, X, Y);
+            SplashKit.DrawBitmap(Bitmap, X, Y);
         }
         public override void DestroySelf()
         {
-           SplashKit.FreeBitmap(_bitmap);
+           SplashKit.FreeBitmap(Bitmap);
         }
         public void RegisterAsMoveable()
         {
@@ -53,6 +52,7 @@ namespace customfinal
                 X += _speed;
             }
         }
+
         public HealthPool HealthPool
         {
             get { return _healthPool; }

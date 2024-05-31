@@ -19,6 +19,12 @@ namespace customfinal
             LevelId = levelId;
             PlayerHealth = playerHealth;
         }
+        public void Draw()
+        {
+            SplashKit.DrawText("Time: " + Time, Color.Black, 10, 10);
+            SplashKit.DrawText("Level: " + LevelId, Color.Black, 10, 30);
+            SplashKit.DrawText("Health: " + PlayerHealth.CurrentHealth, Color.Black, 10, 50);
+        }
         public void UpdateTime()
         {
             ulong currentTime = SplashKit.CurrentTicks() - _times;

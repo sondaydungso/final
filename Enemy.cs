@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace customfinal
 {
-    public class Enemy : GameObject, IMoveable
+    public class Enemy : GameObject, IMoveable, IHurtable
     {
-        private Bitmap _bitmap;
         private float _speed;
         private HealthPool _healthPool;
         private int _damage;
@@ -21,11 +20,11 @@ namespace customfinal
         }
         public override void Draw()
         {
-            SplashKit.DrawBitmap(_bitmap, X, Y);
+            SplashKit.DrawBitmap(Bitmap, X, Y);
         }
         public override void DestroySelf()
         {
-            SplashKit.FreeBitmap(_bitmap);
+            SplashKit.FreeBitmap(Bitmap);
         }
         public void Move()
         {
@@ -52,6 +51,10 @@ namespace customfinal
         public void RegisterAsMoveable()
         {
             MovementManager.AddMoveable(this);
+        }
+        public void Hurt(int damage)
+        {
+            HealthPool.TakeDamage(damage);           
         }
 
         public HealthPool HealthPool
