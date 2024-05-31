@@ -1,0 +1,15 @@
+C:\Users\tranp\OneDrive\Documents\GitHub\final\bin\Debug\net8.0\customfinal.exe
+C:\Users\tranp\OneDrive\Documents\GitHub\final\bin\Debug\net8.0\customfinal.deps.json
+C:\Users\tranp\OneDrive\Documents\GitHub\final\bin\Debug\net8.0\customfinal.runtimeconfig.json
+C:\Users\tranp\OneDrive\Documents\GitHub\final\bin\Debug\net8.0\customfinal.dll
+C:\Users\tranp\OneDrive\Documents\GitHub\final\bin\Debug\net8.0\customfinal.pdb
+C:\Users\tranp\OneDrive\Documents\GitHub\final\obj\Debug\net8.0\customfinal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tranp\OneDrive\Documents\GitHub\final\obj\Debug\net8.0\customfinal.AssemblyInfoInputs.cache
+C:\Users\tranp\OneDrive\Documents\GitHub\final\obj\Debug\net8.0\customfinal.AssemblyInfo.cs
+C:\Users\tranp\OneDrive\Documents\GitHub\final\obj\Debug\net8.0\customfinal.csproj.CoreCompileInputs.cache
+C:\Users\tranp\OneDrive\Documents\GitHub\final\obj\Debug\net8.0\customfinal.sourcelink.json
+C:\Users\tranp\OneDrive\Documents\GitHub\final\obj\Debug\net8.0\customfinal.dll
+C:\Users\tranp\OneDrive\Documents\GitHub\final\obj\Debug\net8.0\refint\customfinal.dll
+C:\Users\tranp\OneDrive\Documents\GitHub\final\obj\Debug\net8.0\customfinal.pdb
+C:\Users\tranp\OneDrive\Documents\GitHub\final\obj\Debug\net8.0\customfinal.genruntimeconfig.cache
+C:\Users\tranp\OneDrive\Documents\GitHub\final\obj\Debug\net8.0\ref\customfinal.dll

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\customfinal\\customfinal.csproj",
+      "projectUniqueName": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\customfinal.csproj",
       "projectName": "customfinal",
-      "projectPath": "C:\\customfinal\\customfinal.csproj",
+      "projectPath": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\customfinal.csproj",
       "packagesPath": "C:\\Users\\tranp\\.nuget\\packages\\",
-      "outputPath": "C:\\customfinal\\obj\\",
+      "outputPath": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tranp\\AppData\\Roaming\\NuGet\\NuGet.Config",
