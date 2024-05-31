@@ -9,6 +9,7 @@ namespace customfinal
 {
     public interface IMoveable
     {
-        void Move(Point2D p);
+        void RegisterAsMoveable();
+        void Move();
     }
 }

@@ -12,7 +12,7 @@ namespace customfinal
         private Bitmap _bitmap;
         private float _speed;
         private HeathPool _healthPool;
-        public Player(string name, Bitmap bitmap, float x, float y, Collider collider, float speed, HeathPool healthPool) : base(name, bitmap, x, y, collider)
+        public Player(string name, Bitmap bitmap, float x, float y, float speed, HeathPool healthPool) : base(name, bitmap, x, y)
         {
             _speed = speed;
             _healthPool = healthPool;
@@ -28,23 +28,23 @@ namespace customfinal
         {
            SplashKit.FreeBitmap(_bitmap);
         }
-        public void Move(Point2D playerPosition)
+        public void Move()
         {
             if (SplashKit.KeyDown(KeyCode.WKey))
             {
-                playerPosition.Y -= _speed;
+                Y -= _speed;
             }
             if (SplashKit.KeyDown(KeyCode.SKey))
             {
-                playerPosition.Y += _speed;
+                Y += _speed;
             }
             if (SplashKit.KeyDown(KeyCode.AKey))
             {
-                playerPosition.X -= _speed;
+                X -= _speed;
             }
             if (SplashKit.KeyDown(KeyCode.DKey))
             {
-                playerPosition.X += _speed;
+                X += _speed;
             }
         }
         public HeathPool HealthPool

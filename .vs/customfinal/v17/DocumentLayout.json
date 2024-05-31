@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\heathpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:heathpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\movementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:movementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\imoveable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:imoveable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\heathpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:heathpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +38,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Player.cs",
+              "RelativeDocumentMoniker": "Player.cs",
+              "ToolTip": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Player.cs",
+              "RelativeToolTip": "Player.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAACAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T02:45:27.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Enemy.cs",
+              "RelativeDocumentMoniker": "Enemy.cs",
+              "ToolTip": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Enemy.cs",
+              "RelativeToolTip": "Enemy.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowDIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T02:44:22.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MovementManager.cs",
+              "DocumentMoniker": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\MovementManager.cs",
+              "RelativeDocumentMoniker": "MovementManager.cs",
+              "ToolTip": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\MovementManager.cs",
+              "RelativeToolTip": "MovementManager.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAowCIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T02:38:55.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IMoveable.cs",
+              "DocumentMoniker": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\IMoveable.cs",
+              "RelativeDocumentMoniker": "IMoveable.cs",
+              "ToolTip": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\IMoveable.cs",
+              "RelativeToolTip": "IMoveable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T02:38:38.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "HeathPool.cs",
               "DocumentMoniker": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\HeathPool.cs",
               "RelativeDocumentMoniker": "HeathPool.cs",
@@ -39,30 +111,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "GameObject.cs",
               "DocumentMoniker": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\GameObject.cs",
               "RelativeDocumentMoniker": "GameObject.cs",
               "ToolTip": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\GameObject.cs",
               "RelativeToolTip": "GameObject.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAADgAAAAJAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAewDEAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T02:17:51.48Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAA1wBoAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T01:53:55.374Z",
               "EditorCaption": ""

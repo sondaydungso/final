@@ -13,14 +13,12 @@ namespace customfinal
         private string _name;
         private float _x, _y;
         //private int _health;
-        private Collider _collider;
-        public GameObject(string name, Bitmap bitmap, float x, float y, Collider collider)
+        public GameObject(string name, Bitmap bitmap, float x, float y)
         {
             Name = name;
             Bitmap = bitmap;
             X = x;
             Y = y;
-            _collider = collider;
         }
         public abstract void Draw();
 
@@ -50,10 +48,5 @@ namespace customfinal
         //    get { return _health; }
         //    set { _health = value; }
         //}
-        public Collider Collider
-        {
-            get { return _collider; }
-            set { _collider = value; }
-        }
     }
 }

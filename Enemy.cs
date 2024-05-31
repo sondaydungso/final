@@ -10,10 +10,9 @@ namespace customfinal
     public class Enemy : GameObject, IMoveable
     {
         private Bitmap _bitmap;
-        private Collider _collider;
         private float _speed;
         private HeathPool _healthPool;
-        public Enemy(string name, Bitmap bitmap, float x, float y, Collider collider, float speed, HeathPool healthPool) : base(name, bitmap, x, y, collider)
+        public Enemy(string name, Bitmap bitmap, float x, float y, float speed, HeathPool healthPool) : base(name, bitmap, x, y)
         {
             _speed = speed;
             _healthPool = healthPool;
@@ -27,11 +26,14 @@ namespace customfinal
         {
             SplashKit.FreeBitmap(_bitmap);
         }
-        public void Move(Point2D playerPosition)
+        public void Move()
         {
+            var playerX = MovementManager.Player.X;
+            var playerY = MovementManager.Player.Y;
+
             // Calculate the direction towards the player
-            float deltaX = (float)(playerPosition.X - X);
-            float deltaY = (float)(playerPosition.Y - Y);
+            float deltaX = (float)(playerX - X);
+            float deltaY = (float)(playerY - Y);
 
             // Normalize the direction vector
             float distance = MathF.Sqrt(deltaX * deltaX + deltaY * deltaY);
@@ -46,11 +48,13 @@ namespace customfinal
             X += directionX * _speed;
             Y += directionY * _speed;
         }
+
         public HeathPool HealthPool
         {
             get { return _healthPool; }
             set { _healthPool = value; }
         }
+
         public Bitmap Bitmap
         {
             get { return _bitmap; }
