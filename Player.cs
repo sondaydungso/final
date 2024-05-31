@@ -13,7 +13,7 @@ namespace customfinal
         private float _speed;
         private HealthPool _healthPool;
         private int _damage;
-        public Player(string name, Bitmap bitmap,int damage, float x, float y, float speed, HealthPool healthPool) : base(name, bitmap, x, y)
+        public Player(string name, Bitmap bitmap, float x, float y, float speed, int damage, HealthPool healthPool) : base(name, bitmap, x, y)
         {
             _speed = speed;
             _healthPool = healthPool;
