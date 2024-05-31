@@ -13,20 +13,20 @@ namespace customfinal
                 SplashKit.ProcessEvents();
                 SplashKit.ClearScreen();
 
-                Player player = new Player("Player", SplashKit.BitmapNamed("Player"), 400, 300, 5, new HeathPool(100, 100));
+                Player player = new Player("Player", SplashKit.BitmapNamed("Player"), 400, 300, 5, new HealthPool(1, 1));
                 MovementManager.Player = player;
 
                 //spawn enemies
                 int enemiesToSpawn = 10;
                 while(enemiesToSpawn > 0)
                 {
-                    Enemy enemy = new Enemy("Enemy", SplashKit.BitmapNamed("Enemy"), 100, 100, 2, new HeathPool(1, 1));
+                    Enemy enemy = new Enemy("Enemy", SplashKit.BitmapNamed("Enemy"), 100, 100, 2, new HealthPool(1, 1));
                     //register enemy as a moveable, and will be moved by the movement manager
                     enemy.RegisterAsMoveable();
                     enemiesToSpawn--;
                 }
                 PowerUp powerUp = new PowerUpMovementSpeed("PowerUpSpeed", SplashKit.BitmapNamed("PowerUp"), 200, 200, 3, 5);
-                PowerUp powerUp1 = new PowerUpHeal("PowerUpHeal", SplashKit.BitmapNamed("PowerUp"), 200, 200, 3, 5);
+                PowerUp powerUp1 = new PowerUpHeal("PowerUpHeal", SplashKit.BitmapNamed("PowerUp"), 200, 200, 3);
 
                 //Move everything that can move
                 MovementManager.MoveAll();

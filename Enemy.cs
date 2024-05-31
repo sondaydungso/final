@@ -11,12 +11,12 @@ namespace customfinal
     {
         private Bitmap _bitmap;
         private float _speed;
-        private HeathPool _healthPool;
-        public Enemy(string name, Bitmap bitmap, float x, float y, float speed, HeathPool healthPool) : base(name, bitmap, x, y)
+        private HealthPool _healthPool;
+        public Enemy(string name, Bitmap bitmap, float x, float y, float speed, HealthPool healthPool) : base(name, bitmap, x, y)
         {
             _speed = speed;
             _healthPool = healthPool;
-            _bitmap = SplashKit.BitmapNamed("");// Add this after finish
+
         }
         public override void Draw()
         {
@@ -53,17 +53,13 @@ namespace customfinal
             MovementManager.AddMoveable(this);
         }
 
-        public HeathPool HealthPool
+        public HealthPool HealthPool
         {
             get { return _healthPool; }
             set { _healthPool = value; }
         }
 
         
-        public float Speed
-        {
-            get { return _speed; }
-            set { _speed = value; }
-        }
+        
     }
 }

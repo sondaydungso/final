@@ -11,9 +11,9 @@ namespace customfinal
     {
         private int _time;
         private int _levelId;
-        private HeathPool _playerHealth;
+        private HealthPool _playerHealth;
         private ulong _times;
-        public Scoreboard(int time, int levelId, HeathPool playerHealth)
+        public Scoreboard(int time, int levelId, HealthPool playerHealth)
         {
             Time = time;
             LevelId = levelId;
@@ -34,7 +34,7 @@ namespace customfinal
             get { return _levelId; }
             set { _levelId = value; }
         }
-        public HeathPool PlayerHealth
+        public HealthPool PlayerHealth
         {
             get { return _playerHealth; }
             set { _playerHealth = value; }

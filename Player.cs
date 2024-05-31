@@ -11,13 +11,13 @@ namespace customfinal
     {
         private Bitmap _bitmap;
         private float _speed;
-        private HeathPool _healthPool;
+        private HealthPool _healthPool;
         private int _damage;
-        public Player(string name, Bitmap bitmap,int damage, float x, float y, float speed, HeathPool healthPool) : base(name, bitmap, x, y)
+        public Player(string name, Bitmap bitmap,int damage, float x, float y, float speed, HealthPool healthPool) : base(name, bitmap, x, y)
         {
             _speed = speed;
             _healthPool = healthPool;
-            _bitmap = SplashKit.BitmapNamed("");// Add this after finish
+
             _damage = damage;
             
         }
@@ -53,7 +53,7 @@ namespace customfinal
                 X += _speed;
             }
         }
-        public HeathPool HealthPool
+        public HealthPool HealthPool
         {
             get { return _healthPool; }
             set { _healthPool = value; }

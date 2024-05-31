@@ -10,6 +10,7 @@ namespace customfinal
     {
         private static readonly MovementManager instance = new MovementManager();
         private static List<IMoveable> _moveables = new List<IMoveable>();
+        private static Player _player;
 
         static MovementManager()
         {
@@ -26,7 +27,6 @@ namespace customfinal
                 return instance;
             }
         }
-        private static Player _player;
         public static Player Player
         {
             get { return _player; }

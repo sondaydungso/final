@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace customfinal
 {
-    public class HeathPool
+    public class HealthPool
     {
         private int _currentHealth;
         private int _maxHealth;
-        public HeathPool(int maxHealth, int currentHealth)
+        public HealthPool(int maxHealth, int currentHealth)
         {
             MaxHealth = maxHealth;
             CurrentHealth = currentHealth;

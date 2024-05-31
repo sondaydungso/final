@@ -11,9 +11,9 @@ namespace customfinal
     {
         
         private Bitmap _bitmap;
-        private HeathPool _heathPool;
+        private HealthPool _heathPool;
 
-        public Barrier(string name, Bitmap bitmap, float x, float y, HeathPool heathPool) : base(name, bitmap, x, y)
+        public Barrier(string name, Bitmap bitmap, float x, float y, HealthPool heathPool) : base(name, bitmap, x, y)
         {
             _bitmap = SplashKit.BitmapNamed(""); //Add this when find the asset
             _heathPool = heathPool;
@@ -30,7 +30,7 @@ namespace customfinal
         }
         
         
-        public HeathPool HeathPool
+        public HealthPool HeathPool
         {
             get { return _heathPool; }
             set { _heathPool = value; }
