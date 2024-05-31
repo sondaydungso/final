@@ -12,11 +12,13 @@ namespace customfinal
         
         private Bitmap _bitmap;
         private HealthPool _heathPool;
+        private bool _disposed;
 
         public Barrier(string name, Bitmap bitmap, float x, float y, HealthPool heathPool) : base(name, bitmap, x, y)
         {
             _bitmap = SplashKit.BitmapNamed(""); //Add this when find the asset
             _heathPool = heathPool;
+            _disposed = false;
         }
 
         public override void Draw()
@@ -26,7 +28,10 @@ namespace customfinal
 
         public override void DestroySelf()
         {
-            SplashKit.FreeBitmap(_bitmap);
+            if (_disposed == true)
+            {
+                SplashKit.FreeBitmap(_bitmap);
+            }                       
         }
         
         
@@ -34,6 +39,13 @@ namespace customfinal
         {
             get { return _heathPool; }
             set { _heathPool = value; }
+        }
+        public void Disposed()
+        {
+            if (_heathPool.CurrentHealth <= 0)
+            {
+                 _disposed = true;
+            }
         }
     }
     
