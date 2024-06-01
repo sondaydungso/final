@@ -29,6 +29,7 @@ namespace customfinal
             while (barriersToSpawn > 0)
             {
                 GameManager.Instance.BarrierManager.SpawnBarrierRandomPos();
+                
                 barriersToSpawn--;
             }
         }

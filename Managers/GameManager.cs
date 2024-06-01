@@ -46,6 +46,7 @@ namespace customfinal.Managers
             _player.Move();
             _enemyManager.MoveAllEnemies();
             _fireballManager.MoveAllFireballs();
+            _barrierManager.DrawAllBarriers();
         }
 
         public void Update()

@@ -29,6 +29,13 @@ namespace customfinal.Managers
             ConcreteClasses.Barrier barrier = new ConcreteClasses.Barrier("Barrier", SplashKit.BitmapNamed("Barrier"), x, y, 9999);
             _barriers.Add(barrier);
         }
+        public void DrawAllBarriers()
+        {
+            foreach (ConcreteClasses.Barrier barrier in _barriers)
+            {
+                barrier.Draw();
+            }
+        }
         public void ClearAllBarriers()
         {
             _barriers.Clear();
@@ -36,13 +43,6 @@ namespace customfinal.Managers
         public void ClearAllDestroyedBarriers()
         {
             _barriers.RemoveAll(barrier => barrier.IsDestroyed);
-        }
-        public void DrawAllBarriers()
-        {
-            foreach (ConcreteClasses.Barrier barrier in _barriers)
-            {
-                barrier.Draw();
-            }
         }
         public void KillBarrier(ConcreteClasses.Barrier barrier)
         {
