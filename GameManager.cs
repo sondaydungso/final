@@ -44,10 +44,7 @@ namespace customfinal
         {
             _moveables.Add(moveable);
         }
-        public static void RemoveMoveable(IMoveable moveable)
-        {
-            //_moveables.Remove(moveable);
-        }
+        
 
         public static void MoveAll()
         {

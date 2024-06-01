@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\fireball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:fireball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\powerup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\barrier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:barrier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|solutionrelative:note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98252D96-52A2-4F21-A63A-49AF42AE06D7}|customfinal.csproj|c:\\users\\tranp\\onedrive\\documents\\github\\final\\imoveable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "SplashKit.cs",
               "DocumentMoniker": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\lib\\SplashKit.cs",
               "RelativeDocumentMoniker": "lib\\SplashKit.cs",
@@ -98,25 +98,37 @@
               "RelativeToolTip": "lib\\SplashKit.cs",
               "ViewState": "AQIAAAtHAAAAAAAAAAASwBtHAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T06:30:42.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-01T06:30:42.491Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Player.cs",
               "RelativeDocumentMoniker": "Player.cs",
               "ToolTip": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Player.cs",
               "RelativeToolTip": "Player.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAewB4AAAAKAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAmwB4AAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T14:23:14.069Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\GameManager.cs",
+              "RelativeDocumentMoniker": "GameManager.cs",
+              "ToolTip": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\GameManager.cs",
+              "RelativeToolTip": "GameManager.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAEwC4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T02:38:55.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Note.cs",
               "DocumentMoniker": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Note.cs",
               "RelativeDocumentMoniker": "Note.cs",
@@ -129,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -148,27 +160,14 @@
               "RelativeDocumentMoniker": "Fireball.cs",
               "ToolTip": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Fireball.cs",
               "RelativeToolTip": "Fireball.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAhwA4AAAAiAAAA",
+              "ViewState": "AQIAADEAAAAAAAAAAAAMwCUAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T10:48:13.147Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\GameManager.cs",
-              "RelativeDocumentMoniker": "GameManager.cs",
-              "ToolTip": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\GameManager.cs",
-              "RelativeToolTip": "GameManager.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAmwDUAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T02:38:55.306Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Enemy.cs",
               "RelativeDocumentMoniker": "Enemy.cs",
@@ -176,8 +175,7 @@
               "RelativeToolTip": "Enemy.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAASwBoAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T02:44:22.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T02:44:22.977Z"
             },
             {
               "$type": "Document",
@@ -189,8 +187,7 @@
               "RelativeToolTip": "Level.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAowCMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T12:20:25.302Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T12:20:25.302Z"
             },
             {
               "$type": "Document",
@@ -202,8 +199,7 @@
               "RelativeToolTip": "PowerUpFactory.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T11:51:34.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T11:51:34.49Z"
             },
             {
               "$type": "Document",
@@ -231,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Barrier.cs",
               "DocumentMoniker": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Barrier.cs",
               "RelativeDocumentMoniker": "Barrier.cs",
@@ -239,8 +235,7 @@
               "RelativeToolTip": "Barrier.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAASwB4AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T05:44:27.856Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T05:44:27.856Z"
             },
             {
               "$type": "Document",
@@ -268,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PowerUp.cs",
               "DocumentMoniker": "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\PowerUp.cs",
               "RelativeDocumentMoniker": "PowerUp.cs",
@@ -276,8 +271,7 @@
               "RelativeToolTip": "PowerUp.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAIAwwBcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T05:09:10.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T05:09:10.429Z"
             },
             {
               "$type": "Document",
@@ -289,8 +283,7 @@
               "RelativeToolTip": "IMoveable.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T02:38:38.489Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T02:38:38.489Z"
             },
             {
               "$type": "Document",
@@ -302,8 +295,7 @@
               "RelativeToolTip": "HealthPool.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAuwCsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T02:18:39.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T02:18:39.728Z"
             },
             {
               "$type": "Document",
@@ -315,8 +307,7 @@
               "RelativeToolTip": "GameObject.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAQwAkAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T02:17:51.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T02:17:51.48Z"
             }
           ]
         }

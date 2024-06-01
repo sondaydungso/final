@@ -35,7 +35,7 @@ namespace customfinal
         }
         public override void DestroySelf()
         {
-            GameManager.RemoveMoveable(this);
+            
         }
         public void Move() 
         {
