@@ -8,8 +8,10 @@ namespace customfinal.Managers
     {
         private FireballManager _fireballManager = new FireballManager();
         private EnemyManager _enemyManager = new EnemyManager();
+        private BarrierManager _barrierManager = new BarrierManager();
 
         private static readonly GameManager instance = new GameManager();
+
 
         private Player _player;
 
@@ -37,6 +39,7 @@ namespace customfinal.Managers
 
         public FireballManager FireballManager { get => _fireballManager; set => _fireballManager = value; }
         public EnemyManager EnemyManager { get => _enemyManager; set => _enemyManager = value; }
+        public BarrierManager BarrierManager { get => _barrierManager; set => _barrierManager = value; }
 
         public void MoveAll()
         {

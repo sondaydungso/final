@@ -13,6 +13,7 @@ namespace customfinal
             SplashKit.LoadBitmap("Player", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Player.png");
             SplashKit.LoadBitmap("Enemy", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Enemy.png");
             SplashKit.LoadBitmap("Fireball", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Fireball.png");
+            SplashKit.LoadBitmap("Barrier", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Barrier.png");
 
             //TODO: remove this dummy testing player
             GameManager.Instance.SpawnPlayer(400, 300, 3, 10, 5);
@@ -23,6 +24,12 @@ namespace customfinal
             {
                 GameManager.Instance.EnemyManager.SpawnEnemyRandomPos();
                 enemiesToSpawn--;
+            }
+            int barriersToSpawn = 3;
+            while (barriersToSpawn > 0)
+            {
+                GameManager.Instance.BarrierManager.SpawnBarrierRandomPos();
+                barriersToSpawn--;
             }
         }
 

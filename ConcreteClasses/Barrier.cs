@@ -1,4 +1,5 @@
 ﻿using customfinal.Common;
+using customfinal.Managers;
 using SplashKitSDK;
 using System;
 using System.Collections.Generic;
@@ -13,23 +14,26 @@ namespace customfinal.ConcreteClasses
 
 
         private HealthPool _heathPool;
+        private bool _isDestroyed = false;
 
-
-        public Barrier(string name, Bitmap bitmap, float x, float y, HealthPool heathPool) : base(name, bitmap, x, y)
+        public Barrier(string name, Bitmap bitmap, float x, float y, int maxHP) : base(name, bitmap, x, y)
         {
 
-            _heathPool = heathPool;
+            _heathPool = new HealthPool(maxHP, maxHP);
 
         }
 
         public override void Draw()
         {
-            SplashKit.DrawBitmap(Bitmap, X, Y);
+            if (!IsDestroyed)
+            {
+                SplashKit.DrawBitmap(Bitmap, X, Y);
+            }
         }
 
         public override void DestroySelf()
         {
-
+            GameManager.Instance.BarrierManager.KillBarrier(this);
 
         }
 
@@ -39,6 +43,8 @@ namespace customfinal.ConcreteClasses
             get { return _heathPool; }
             set { _heathPool = value; }
         }
+
+        public bool IsDestroyed { get => _isDestroyed; set => _isDestroyed = value; }
         //TODO: finish implememtation of barrier and barrier manager
 
     }
