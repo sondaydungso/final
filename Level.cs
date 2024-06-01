@@ -34,10 +34,6 @@ namespace customfinal
                 enemy.Draw();
             }
         }
-        public void Update()
-        {
-           MovementManager.MoveAll();
-        }
         public void AddBarrier(Barrier barrier)
         {
             Barrier barrier1 = new Barrier("Barrier", SplashKit.BitmapNamed("Barrier"), 100, 100, new HealthPool(9999999,100));

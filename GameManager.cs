@@ -6,21 +6,26 @@ using System.Threading.Tasks;
 
 namespace customfinal
 {
-    public class MovementManager
+    public class GameManager
     {
-        private static readonly MovementManager instance = new MovementManager();
+        private static readonly GameManager instance = new GameManager();
+        //draw all of this
+        private static List<GameObject> _gameObjects = new List<GameObject>();
+
+        //move all of this
         private static List<IMoveable> _moveables = new List<IMoveable>();
+
         private static Player _player;
 
-        static MovementManager()
+        static GameManager()
         {
         }
 
-         private MovementManager()
+         private GameManager()
         {
         }
 
-        public static MovementManager Instance
+        public static GameManager Instance
         {
             get
             {
@@ -39,6 +44,10 @@ namespace customfinal
         {
             _moveables.Add(moveable);
         }
+        public static void RemoveMoveable(IMoveable moveable)
+        {
+            //_moveables.Remove(moveable);
+        }
 
         public static void MoveAll()
         {
@@ -47,6 +56,23 @@ namespace customfinal
                 moveable.Move();
             }
         }
-        
+
+        public static void AddGameObject(GameObject obj)
+        {
+            _gameObjects.Add(obj);
+        }
+
+        public static void RemoveGameObject(GameObject obj)
+        {
+            _gameObjects.Remove(obj);
+        }
+
+        public static void Update()
+        {
+            foreach (GameObject obj in _gameObjects)
+            {
+                obj.Draw();
+            }
+        }
     }
 }

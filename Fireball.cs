@@ -11,34 +11,23 @@ namespace customfinal
     {
        
         private float _speed;
-        private float _directionX;
-        private float _directionY;
-        private float _mouseX;
-        private float _mouseY;
-        private float _playerX;
-        private float _playerY;
-        private HealthPool _healthPool;
-        private float _deltaX;
-        private float _deltaY;
         private float _magnitude;
         private float _normalisedX;
         private float _normalisedY;
+        private HealthPool _healthPool;
 
-        public Fireball(string name, Bitmap bitmap, float x, float y, float speed, float mouseDirectionX, float mouseDirectionY, HealthPool healthPool) : base(name, bitmap, x, y)
+        public Fireball(string name, Bitmap bitmap, float spawnX, float spawnY, float speed, float mouseDirectionX, float mouseDirectionY, HealthPool healthPool) : base(name, bitmap, spawnX, spawnY)
         {
-            _speed = speed;
-             _deltaX = mouseX - X;
-             _deltaY = mouseY - Y;
-             _magnitude = MathF.Sqrt(_deltaX * _deltaX + _deltaY * _deltaY);
-             _normalisedX = _deltaX / _magnitude;
-             _normalisedY = _deltaY / _magnitude;
-            _directionX = mouseDirectionX;
-            _directionY = mouseDirectionY;
+             _speed = speed;
 
-            _playerX = x;
-            _playerY = y;
             _healthPool = healthPool;
-            
+
+            // Calculate the direction towards the target   
+             var deltaX = mouseDirectionX - X;
+             var deltaY = mouseDirectionY - Y;
+             _magnitude = MathF.Sqrt(deltaX * deltaX + deltaY * deltaY);
+             _normalisedX = deltaX / _magnitude;
+             _normalisedY = deltaY / _magnitude;
         }
         public override void Draw()
         {
@@ -46,44 +35,44 @@ namespace customfinal
         }
         public override void DestroySelf()
         {
-            SplashKit.FreeBitmap(Bitmap);
+            GameManager.RemoveMoveable(this);
         }
         public void Move() 
         {
-            
-            
-            X +=  normalisedX * _speed;
-            Y += normalisedY * _speed;
+            X +=  NormalisedX * _speed;
+            Y += NormalisedY * _speed;
+
+            if (IsOutOfBounds())
+            {
+                DestroySelf();
+            }
         }
+
+        private bool IsOutOfBounds()
+        {
+            return X < 0 || X > 900 || Y < 0 || Y > 700;
+        }
+
         public void Hurt(int damage)
         {
             HealthPool.TakeDamage(damage);
         }
         public void RegisterAsMoveable()
         {
-            MovementManager.AddMoveable(this);
+            GameManager.AddMoveable(this);
+            GameManager.AddGameObject(this);
         }
         public HealthPool HealthPool
         {
             get { return _healthPool; }
             set { _healthPool = value; }
         }
-        public float mouseX
-        {
-            get { return _mouseX; }
-            set { _mouseX = value; }
-        }
-        public float mouseY
-        {
-            get { return _mouseY; }
-            set { _mouseY = value; }
-        }
-        public float normalisedX
+        public float NormalisedX
         {
             get { return _normalisedX; }
             set { _normalisedX = value; }
         }
-        public float normalisedY
+        public float NormalisedY
         {
             get { return _normalisedY; }
             set { _normalisedY = value; }

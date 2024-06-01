@@ -20,7 +20,7 @@ namespace customfinal
         }
         public override void DestroySelf()
         {
-            SplashKit.FreeBitmap(_bitmap);
+
         }
         public virtual void ApplyPowerUp(Player player)
         {

@@ -24,12 +24,13 @@ namespace customfinal
         }
         public override void DestroySelf()
         {
-            SplashKit.FreeBitmap(Bitmap);
+           
+           
         }
         public void Move()
         {
-            var playerX = MovementManager.Player.X;
-            var playerY = MovementManager.Player.Y;
+            var playerX = GameManager.Player.X;
+            var playerY = GameManager.Player.Y;
 
             // Calculate the direction towards the player
             float deltaX = (float)(playerX - X);
@@ -50,7 +51,7 @@ namespace customfinal
         }
         public void RegisterAsMoveable()
         {
-            MovementManager.AddMoveable(this);
+            GameManager.AddMoveable(this);
         }
         public void Hurt(int damage)
         {

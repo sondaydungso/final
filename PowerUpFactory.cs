@@ -36,7 +36,7 @@ namespace customfinal
             {
                 if (i == 0) //Add logic to check collision here
                 {
-                    powerUp.ApplyPowerUp(MovementManager.Player);
+                    powerUp.ApplyPowerUp(GameManager.Player);
                     _powerUps.Remove(powerUp);
                     break;
                 }

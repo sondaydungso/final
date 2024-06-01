@@ -12,6 +12,7 @@ namespace customfinal
         private float _speed;
         private HealthPool _healthPool;
         private int _damage;
+
         public Player(string name, Bitmap bitmap, float x, float y, float speed, int damage, HealthPool healthPool) : base(name, bitmap, x, y)
         {
             _speed = speed;
@@ -27,11 +28,13 @@ namespace customfinal
         }
         public override void DestroySelf()
         {
-           SplashKit.FreeBitmap(Bitmap);
+          
+           
+           
         }
         public void RegisterAsMoveable()
         {
-            MovementManager.AddMoveable(this);
+            GameManager.AddMoveable(this);
         }
         public void Move()
         {
@@ -56,10 +59,12 @@ namespace customfinal
 
         public void Shoot()
         {
+            int playerdamage = this.Damage;
             //spawn fireball
             Fireball fireball = new Fireball("fireball",
                                              SplashKit.LoadBitmap("fireball", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Fireball.png"),
-                                             X, Y, 5, SplashKit.MouseX(), SplashKit.MouseY(), new HealthPool(1, 1));
+                                             this.X, this.Y, 2, SplashKit.MouseX(), SplashKit.MouseY(), new HealthPool(playerdamage, playerdamage));
+            fireball.RegisterAsMoveable();
         }
 
         public HealthPool HealthPool
