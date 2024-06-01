@@ -1,11 +1,13 @@
-﻿using SplashKitSDK;
+﻿using customfinal.Common;
+using customfinal.ConcreteClasses;
+using SplashKitSDK;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace customfinal
+namespace customfinal.ConcreteClasses.PowerUps
 {
     public class PowerUp : GameObject
     {
@@ -24,7 +26,7 @@ namespace customfinal
         }
         public virtual void ApplyPowerUp(Player player)
         {
-            
+
         }
 
 

@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using customfinal.Common;
 using SplashKitSDK;
 
-namespace customfinal
+namespace customfinal.ConcreteClasses
 {
     public class Scoreboard
     {

@@ -16350,7 +16350,7 @@ namespace SplashKitSDK
 
         static PointerWrapper()
         {
-            //Register Remove with SplashKit
+            //Register KillFireball with SplashKit
             //Console.WriteLine("Registering");
             _ptrRegister = new Dictionary<IntPtr, PointerWrapper>();
             SplashKit.RegisterFreeNotifier(_RemoveMethod);

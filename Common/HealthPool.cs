@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace customfinal
+namespace customfinal.Common
 {
     public class HealthPool
     {
@@ -22,7 +22,7 @@ namespace customfinal
         }
         public int MaxHealth
         {
-            
+
             set { _maxHealth = value; }
         }
         public void TakeDamage(int damage)
@@ -41,6 +41,6 @@ namespace customfinal
                 _currentHealth = _maxHealth;
             }
         }
-        
+
     }
 }

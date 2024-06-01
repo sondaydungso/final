@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace customfinal
+namespace customfinal.Common
 {
     public abstract class GameObject
     {

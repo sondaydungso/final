@@ -1,11 +1,14 @@
-﻿using SplashKitSDK;
+﻿using customfinal.Common;
+using customfinal.Interfaces;
+using customfinal.Managers;
+using SplashKitSDK;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace customfinal
+namespace customfinal.ConcreteClasses
 {
     public class Player : GameObject, IMoveable
     {
@@ -13,13 +16,13 @@ namespace customfinal
         private HealthPool _healthPool;
         private int _damage;
 
-        public Player(string name, Bitmap bitmap, float x, float y, float speed, int damage, HealthPool healthPool) : base(name, bitmap, x, y)
+        public Player(string name, Bitmap bitmap, float x, float y, float speed, int damage, int maxHp) : base(name, bitmap, x, y)
         {
             _speed = speed;
-            _healthPool = healthPool;
+            _healthPool = new HealthPool(maxHp, maxHp);
 
             _damage = damage;
-            
+
         }
 
         public override void Draw()
@@ -28,30 +31,25 @@ namespace customfinal
         }
         public override void DestroySelf()
         {
-          
-           
-           
+
         }
-        public void RegisterAsMoveable()
-        {
-            GameManager.AddMoveable(this);
-        }
+
         public void Move()
         {
-            // change the if else to switch statements
-            if (SplashKit.KeyDown(KeyCode.WKey))
+            //TODO: change the if else to switch statements
+            if (SplashKit.KeyDown(KeyCode.WKey) && Y > 0)
             {
                 Y -= _speed;
             }
-            if (SplashKit.KeyDown(KeyCode.SKey))
+            if (SplashKit.KeyDown(KeyCode.SKey) && Y < Constants.GameWindow.Height - Bitmap.Height)
             {
                 Y += _speed;
             }
-            if (SplashKit.KeyDown(KeyCode.AKey))
+            if (SplashKit.KeyDown(KeyCode.AKey) && X > 0)
             {
                 X -= _speed;
             }
-            if (SplashKit.KeyDown(KeyCode.DKey))
+            if (SplashKit.KeyDown(KeyCode.DKey) && X < Constants.GameWindow.Width - Bitmap.Width)
             {
                 X += _speed;
             }
@@ -59,12 +57,9 @@ namespace customfinal
 
         public void Shoot()
         {
-            int playerdamage = this.Damage;
+            int playerdamage = Damage;
             //spawn fireball
-            Fireball fireball = new Fireball("fireball",
-                                             SplashKit.LoadBitmap("fireball", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Fireball.png"),
-                                             this.X, this.Y, 2, SplashKit.MouseX(), SplashKit.MouseY(), new HealthPool(playerdamage, playerdamage));
-            fireball.RegisterAsMoveable();
+            GameManager.Instance.FireballManager.SpawnFireball(X, Y, (float)SplashKit.MousePosition().X, (float)SplashKit.MousePosition().Y, playerdamage);
         }
 
         public HealthPool HealthPool
@@ -72,7 +67,7 @@ namespace customfinal
             get { return _healthPool; }
             set { _healthPool = value; }
         }
-        
+
         public float Speed
         {
             get { return _speed; }

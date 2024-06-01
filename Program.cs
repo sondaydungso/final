@@ -1,4 +1,6 @@
 using System;
+using customfinal.ConcreteClasses;
+using customfinal.Managers;
 using SplashKitSDK;
 
 namespace customfinal
@@ -7,55 +9,35 @@ namespace customfinal
     {
         private static void Setup()
         {
-            Player player = new Player("Player", SplashKit.LoadBitmap("Player", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Player.png"), 400, 300, 1, 10, new HealthPool(5, 5));
+            //setup bitmaps
+            SplashKit.LoadBitmap("Player", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Player.png");
+            SplashKit.LoadBitmap("Enemy", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Enemy.png");
+            SplashKit.LoadBitmap("Fireball", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Fireball.png");
 
-            //add player to the list of game objects to be drawn
-            GameManager.AddGameObject(player);
-            GameManager.AddMoveable(player);
-            GameManager.Player = player;
-            
-            
+            //TODO: remove this dummy testing player
+            GameManager.Instance.SpawnPlayer(400, 300, 3, 10, 5);
 
-            //spawn enemies
-            int enemiesToSpawn = 1;
+            //TODO: remove these dummy testing enemies
+            int enemiesToSpawn = 3;
             while (enemiesToSpawn > 0)
             {
-                Enemy enemy = new Enemy("Enemy", SplashKit.LoadBitmap("Enemy", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Enemy.png"), 100, 100, 0.1f, 5, new HealthPool(1, 1));
-                //register enemy as a moveable, and will be moved by the movement manager
-                enemy.RegisterAsMoveable();
-
-                //add enemy to the list of game objects to be drawn
-                GameManager.AddGameObject(enemy);
-
+                GameManager.Instance.EnemyManager.SpawnEnemyRandomPos();
                 enemiesToSpawn--;
             }
-            //PowerUp powerUp = new PowerUpMovementSpeed("PowerUpSpeed", SplashKit.BitmapNamed("PowerUp"), 200, 200, 3, 5);
-            //PowerUp powerUp1 = new PowerUpHeal("PowerUpHeal", SplashKit.BitmapNamed("PowerUp"), 200, 200, 3);
-
         }
 
         public static void Main()
         {
-            new Window("Game", 800, 600);
+            new Window("Game", Constants.GameWindow.Width, Constants.GameWindow.Height);
 
             Setup();
             do
             {
                 SplashKit.ProcessEvents();
                 SplashKit.ClearScreen();
-
-                //player shoot input check
-                if (SplashKit.KeyTyped(KeyCode.QKey))
-                {
-                    GameManager.Player.Shoot();
-                }
-
-                //Move everything that can move
-                GameManager.MoveAll();
-
-                //draw everything
-                GameManager.Update();
-
+                //process a game frame
+                GameManager.Instance.Update();
+                //refresh with a 60fps cap
                 SplashKit.RefreshScreen(60);
             }while (!SplashKit.WindowCloseRequested("Game"));
         }
