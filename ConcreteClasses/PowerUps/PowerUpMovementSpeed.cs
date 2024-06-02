@@ -12,11 +12,11 @@ namespace customfinal.ConcreteClasses.PowerUps
     {
 
         private float _amount;
-        private float _duration;
-        public PowerUpMovementSpeed(string name, Bitmap bitmap, float x, float y, float amount = 3, float duration = 5) : base(name, bitmap, x, y)
+        
+        public PowerUpMovementSpeed(string name, Bitmap bitmap, float x, float y, float amount = 1) : base(name, bitmap, x, y)
         {
             _amount = amount;
-            _duration = duration;
+            
 
         }
         public override void ApplyPowerUp(Player player)

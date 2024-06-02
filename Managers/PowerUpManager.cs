@@ -7,8 +7,8 @@ namespace customfinal.Managers
     public class PowerUpManager
     {
         private List<PowerUp> _powerUps;
-        private ulong _framesUntilSpawn = 300;
-        private ulong _framesLeftUntilSpawn = 300;
+        private int _framesUntilSpawn = 300;
+        private int _framesLeftUntilSpawn = 300;
 
         public List<PowerUp> PowerUps { get => _powerUps; set => _powerUps = value; }
 

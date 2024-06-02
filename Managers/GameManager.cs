@@ -12,11 +12,13 @@ namespace customfinal.Managers
         private EnemyManager _enemyManager = new EnemyManager();
         private BarrierManager _barrierManager = new BarrierManager();
         private PowerUpManager _powerUpManager = new PowerUpManager();
+        private int _framepass = 0;
+        
 
         private static readonly GameManager instance = new GameManager();
 
 
-        private Player? _player;
+        private Player _player;
 
         static GameManager()
         {
@@ -24,8 +26,9 @@ namespace customfinal.Managers
 
         private GameManager()
         {
-        }
 
+        }
+        
         public static GameManager Instance
         {
             get
@@ -69,9 +72,11 @@ namespace customfinal.Managers
             CollisionCheck();
             ClearAllDestroyedObjects();
             DrawAll();
+            DrawStat();
             EnemyManager.SpawnMore();
             PowerUpManager.SpawnMore();
             BarrierManager.SpawnMore();
+
         }
 
         private void ClearAllDestroyedObjects()
@@ -81,7 +86,23 @@ namespace customfinal.Managers
             _barrierManager.ClearAllDestroyedBarriers();
             _powerUpManager.ClearAllDestroyedPowerUps();
         }
+        private void DrawStat()
+        {
+            SplashKit.DrawText("Player HP: " + _player.HealthPool.CurrentHealth, Color.Black, 0, 0);
+            SplashKit.DrawText("Player Damage: " + _player.Damage, Color.Black, 0, 20);
+            SplashKit.DrawText("Player Speed: " + _player.Speed, Color.Black, 0, 40);
+            SplashKit.DrawText("Fireball Count: " + _fireballManager.Fireballs.Count, Color.Black, 0, 60);
+            SplashKit.DrawText("Enemy Count: " + _enemyManager.Enemies.Count, Color.Black, 0, 80);
+            Timmer();
 
+        }
+        private void Timmer()
+        {
+            _framepass++;
+            float time = _framepass / 60;
+            SplashKit.DrawText("Time wasted: " + time, Color.Black, 0, 100);
+        }
+        
         public void PlayerInputCheck()
         {
             //only checks shooting, not moving because Player class already takes care of moving inputs with Player.Move()

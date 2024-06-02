@@ -10,16 +10,16 @@ namespace customfinal.ConcreteClasses.PowerUps
 {
     public class PowerUpDamage : PowerUp
     {
-        private int _amount;
+        
 
-        public PowerUpDamage(string name, Bitmap bitmap, float x, float y, int amount = 3) : base(name, bitmap, x, y)
+        public PowerUpDamage(string name, Bitmap bitmap, float x, float y) : base(name, bitmap, x, y)
         {
-            _amount = amount;
+           
 
         }
         public override void ApplyPowerUp(Player player)
         {
-            player.Damage += player.Damage * 2;
+            player.Damage += player.Damage + 1;
         }
         public override void DestroySelf()
         {
