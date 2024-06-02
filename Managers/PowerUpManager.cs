@@ -7,6 +7,8 @@ namespace customfinal.Managers
     public class PowerUpManager
     {
         private List<PowerUp> _powerUps;
+        private ulong _framesUntilSpawn = 300;
+        private ulong _framesLeftUntilSpawn = 300;
 
         public List<PowerUp> PowerUps { get => _powerUps; set => _powerUps = value; }
 
@@ -21,6 +23,7 @@ namespace customfinal.Managers
             int x = random.Next(0, Constants.GameWindow.Width);
             int y = random.Next(0, Constants.GameWindow.Height);
             int powerUpType = random.Next(0, 3); //  there are 3 types of power-ups (0 for heal, 1 for speed boost, 2 for damage boost )
+            
             PowerUp powerUp;
             switch (powerUpType)
             {
@@ -41,6 +44,7 @@ namespace customfinal.Managers
             {
                 _powerUps.Add(powerUp);
             }
+           
         }
         public void SpawnPowerUp(float x, float y, int powerUpType) // there are 3 types of power-ups (0 for heal, 1 for speed boost, 2 for damage boost )
         {
@@ -59,6 +63,20 @@ namespace customfinal.Managers
                 PowerUp powerUp = new PowerUpDamage("PowerUpDamage", SplashKit.BitmapNamed("PowerUpDamage"), x, y);
                 _powerUps.Add(powerUp);
             }
+        }
+        public void SpawnMore()
+        {
+            if (_framesLeftUntilSpawn > 0)
+            {
+                _framesLeftUntilSpawn--;
+            }
+            
+            if (_powerUps.Count == 0 && _framesLeftUntilSpawn <= 0)
+            {
+                SpawnPowerUpRandomPos();
+                _framesLeftUntilSpawn = _framesUntilSpawn;
+            }
+
         }
         public void DrawAllPowerUps()
         {

@@ -32,6 +32,21 @@ namespace customfinal.Managers
                 barrier.Draw();
             }
         }
+        public void SpawnMore()
+        {
+            Random random = new Random();
+            int x = random.Next(0, Constants.GameWindow.Width);
+            int y = random.Next(0, Constants.GameWindow.Height);
+            int spawnrate = random.Next(0, 100);
+            if (Barriers.Count == 0)
+            {
+                for (int i = 0; i < spawnrate / 2; i++)
+                {
+                    SpawnBarrierRandomPos();
+                }
+            }
+
+        }
         public void ClearAllBarriers()
         {
             _barriers.Clear();
@@ -52,3 +67,4 @@ namespace customfinal.Managers
 
     }
 }
+

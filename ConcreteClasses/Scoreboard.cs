@@ -14,6 +14,7 @@ namespace customfinal.ConcreteClasses
         private int _levelId;
         private HealthPool _playerHealth;
         private ulong _times;
+        private int _enemyKilled;
         public Scoreboard(int time, int levelId, HealthPool playerHealth)
         {
             Time = time;
@@ -46,5 +47,7 @@ namespace customfinal.ConcreteClasses
             get { return _playerHealth; }
             set { _playerHealth = value; }
         }
+
+        public int EnemyKilled { get => _enemyKilled; set => _enemyKilled = value; }
     }
 }

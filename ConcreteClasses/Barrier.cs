@@ -7,22 +7,20 @@ namespace customfinal.ConcreteClasses
 {
     public class Barrier : GameObject
     {
-
-
         private HealthPool _heathPool;
         private bool _isDestroyed = false;
+       
 
         public Barrier(string name, Bitmap bitmap, float x, float y, int maxHP) : base(name, bitmap, x, y)
         {
-
             _heathPool = new HealthPool(maxHP, maxHP);
-
         }
 
         public override void Draw()
         {
             if (!IsDestroyed)
             {
+               
                 SplashKit.DrawBitmap(Bitmap, X, Y);
             }
         }
@@ -30,8 +28,8 @@ namespace customfinal.ConcreteClasses
         public override void DestroySelf()
         {
             GameManager.Instance.BarrierManager.KillBarrier(this);
-
         }
+
         public void Hurt(int damage)
         {
             HealthPool.TakeDamage(damage);
@@ -41,7 +39,6 @@ namespace customfinal.ConcreteClasses
             }
         }
 
-
         public HealthPool HealthPool
         {
             get { return _heathPool; }
@@ -49,8 +46,8 @@ namespace customfinal.ConcreteClasses
         }
 
         public bool IsDestroyed { get => _isDestroyed; set => _isDestroyed = value; }
-        //TODO: finish implememtation of barrier and barrier manager
 
+        
     }
 
 }

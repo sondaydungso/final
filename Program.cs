@@ -10,52 +10,39 @@ namespace customfinal
         private static void Setup()
         {
             //setup bitmaps
-            SplashKit.LoadBitmap("Player", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Player.png");
-            SplashKit.LoadBitmap("Enemy", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Enemy.png");
-            SplashKit.LoadBitmap("Fireball", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Fireball.png");
-            SplashKit.LoadBitmap("Barrier", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Barrier.png");
-            SplashKit.LoadBitmap("PowerUpHeal", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\HP_icon.png");
-            SplashKit.LoadBitmap("PowerUpSpeed", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Spd icon.png");
-
-            //TODO: remove this dummy testing player
-            GameManager.Instance.SpawnPlayer(400, 300, 3, 10, 5);
-
-            //TODO: remove these dummy testing enemies
-            int enemiesToSpawn = 3;
-            while (enemiesToSpawn > 0)
-            {
-                GameManager.Instance.EnemyManager.SpawnEnemyRandomPos();
-                enemiesToSpawn--;
-            }
-            int barriersToSpawn = 3;
-            while (barriersToSpawn > 0)
-            {
-                GameManager.Instance.BarrierManager.SpawnBarrierRandomPos();
-                
-                barriersToSpawn--;
-            }
-            int powerUpsToSpawn = 1;
-            while (powerUpsToSpawn > 0)
-            {
-                GameManager.Instance.PowerUpManager.SpawnPowerUp(100, 200, 0);
-                powerUpsToSpawn--;
-            }
+            GameManager.Instance.LoadAllBitmaps();
+            GameManager.Instance.GameStart();
         }
 
         public static void Main()
         {
-            new Window("Game", Constants.GameWindow.Width, Constants.GameWindow.Height);
+            new Window("My Game", Constants.GameWindow.Width, Constants.GameWindow.Height);
 
             Setup();
+            bool gameover = false;
             do
             {
                 SplashKit.ProcessEvents();
-                SplashKit.ClearScreen();
                 //process a game frame
-                GameManager.Instance.Update();
+                if (!gameover)
+                {
+                    SplashKit.ClearScreen();
+                    GameManager.Instance.Update();
+                }
+                if (GameManager.Instance.Player.HealthPool.CurrentHealth <= 0 && !gameover)
+                {
+                    gameover = true;
+                    GameManager.Instance.GameOver();
+                }
+                if (SplashKit.KeyTyped(KeyCode.SpaceKey) && gameover)
+                {
+                    GameManager.Instance.Restart();
+                    gameover = false;
+                }
+
                 //refresh with a 60fps cap
                 SplashKit.RefreshScreen(60);
-            }while (!SplashKit.WindowCloseRequested("Game"));
+            }while (!SplashKit.WindowCloseRequested("My Game"));
         }
     }
 

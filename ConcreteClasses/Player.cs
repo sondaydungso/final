@@ -37,35 +37,25 @@ namespace customfinal.ConcreteClasses
         public void Move()
         {
             //TODO: change the if else to switch statements
-            if (SplashKit.KeyDown(KeyCode.WKey) && Y > 0 )
+            if (SplashKit.KeyDown(KeyCode.WKey) && Y > 0 && GameManager.Instance.PlayerAllowedToMoveTo(X, Y - _speed))
             {
               
                 Y -= _speed;
             }
-            if (SplashKit.KeyDown(KeyCode.SKey) && Y < Constants.GameWindow.Height - Bitmap.Height)
+            if (SplashKit.KeyDown(KeyCode.SKey) && Y < Constants.GameWindow.Height - Bitmap.Height && GameManager.Instance.PlayerAllowedToMoveTo(X, Y + _speed))
             {
                 Y += _speed;
             }
-            if (SplashKit.KeyDown(KeyCode.AKey) && X > 0)
+            if (SplashKit.KeyDown(KeyCode.AKey) && X > 0 && GameManager.Instance.PlayerAllowedToMoveTo(X - _speed, Y))
             {
                 X -= _speed;
             }
-            if (SplashKit.KeyDown(KeyCode.DKey) && X < Constants.GameWindow.Width - Bitmap.Width)
+            if (SplashKit.KeyDown(KeyCode.DKey) && X < Constants.GameWindow.Width - Bitmap.Width && GameManager.Instance.PlayerAllowedToMoveTo(X + _speed, Y))
             {
                 X += _speed;
             }
         }
-        public void Stop()
-        {
-            // Check collision with barriers
-            foreach (var barrier in GameManager.Instance.BarrierManager.Barriers)
-            {
-                if (SplashKit.BitmapCollision(this.Bitmap, X, Y, barrier.Bitmap, barrier.X, barrier.Y))
-                {
-                    
-                }
-            }
-        }
+        
         public void Hurt(int damage)
         {
             HealthPool.TakeDamage(damage);

@@ -7,7 +7,7 @@ namespace customfinal.Managers
     {
         private int _enemyDamage = 1;
         private float _enemySpeed = 2f;
-        private int _enemyMaxHp = 1;
+        private int _enemyMaxHp = 10;
 
         private List<Enemy> _enemies = new List<Enemy>();
 
@@ -21,6 +21,7 @@ namespace customfinal.Managers
         {
             Enemy enemy = new Enemy("enemy", SplashKit.BitmapNamed("Enemy"), SplashKit.Rnd(0, 800), SplashKit.Rnd(0, 600), _enemySpeed, _enemyDamage, _enemyMaxHp);
             _enemies.Add(enemy);
+
         }
 
         public void SpawnEnemy(float x, float y)
@@ -52,6 +53,18 @@ namespace customfinal.Managers
             foreach (Enemy enemy in _enemies)
             {
                 enemy.Move();
+            }
+        }
+        public void SpawnMore()
+        {
+            Random random = new Random();
+            int spawnrate = random.Next(0, 50);
+            if (Enemies.Count == 0)
+            {
+                for (int i = 0; i < spawnrate; i++)
+                {
+                    SpawnEnemyRandomPos();
+                }
             }
         }
 
