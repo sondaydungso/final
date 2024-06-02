@@ -1,12 +1,10 @@
 ﻿using customfinal.Common;
 using customfinal.Interfaces;
 using customfinal.Managers;
+
+
 using SplashKitSDK;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace customfinal.ConcreteClasses
 {
@@ -28,6 +26,8 @@ namespace customfinal.ConcreteClasses
         public override void Draw()
         {
             SplashKit.DrawBitmap(Bitmap, X, Y);
+            // Draw player HP on top of the player
+            SplashKit.DrawText("HP: " + _healthPool.CurrentHealth, Color.Black, X, Y + 20);
         }
         public override void DestroySelf()
         {
@@ -37,8 +37,9 @@ namespace customfinal.ConcreteClasses
         public void Move()
         {
             //TODO: change the if else to switch statements
-            if (SplashKit.KeyDown(KeyCode.WKey) && Y > 0)
+            if (SplashKit.KeyDown(KeyCode.WKey) && Y > 0 )
             {
+              
                 Y -= _speed;
             }
             if (SplashKit.KeyDown(KeyCode.SKey) && Y < Constants.GameWindow.Height - Bitmap.Height)
@@ -53,6 +54,22 @@ namespace customfinal.ConcreteClasses
             {
                 X += _speed;
             }
+        }
+        public void Stop()
+        {
+            // Check collision with barriers
+            foreach (var barrier in GameManager.Instance.BarrierManager.Barriers)
+            {
+                if (SplashKit.BitmapCollision(this.Bitmap, X, Y, barrier.Bitmap, barrier.X, barrier.Y))
+                {
+                    
+                }
+            }
+        }
+        public void Hurt(int damage)
+        {
+            HealthPool.TakeDamage(damage);
+
         }
 
         public void Shoot()

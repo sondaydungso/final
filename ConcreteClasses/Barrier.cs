@@ -1,11 +1,7 @@
 ﻿using customfinal.Common;
 using customfinal.Managers;
 using SplashKitSDK;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace customfinal.ConcreteClasses
 {
@@ -35,6 +31,14 @@ namespace customfinal.ConcreteClasses
         {
             GameManager.Instance.BarrierManager.KillBarrier(this);
 
+        }
+        public void Hurt(int damage)
+        {
+            HealthPool.TakeDamage(damage);
+            if (HealthPool.CurrentHealth <= 0)
+            {
+                DestroySelf();
+            }
         }
 
 

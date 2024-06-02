@@ -21,6 +21,10 @@ namespace customfinal.ConcreteClasses.PowerUps
         {
             player.Damage += _amount;
         }
+        public override void DestroySelf()
+        {
+            base.DestroySelf();
+        }
     }
 
 }

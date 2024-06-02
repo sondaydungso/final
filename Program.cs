@@ -14,6 +14,8 @@ namespace customfinal
             SplashKit.LoadBitmap("Enemy", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Enemy.png");
             SplashKit.LoadBitmap("Fireball", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Fireball.png");
             SplashKit.LoadBitmap("Barrier", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Barrier.png");
+            SplashKit.LoadBitmap("PowerUpHeal", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\HP_icon.png");
+            SplashKit.LoadBitmap("PowerUpSpeed", "C:\\Users\\tranp\\OneDrive\\Documents\\GitHub\\final\\Resource\\Spd icon.png");
 
             //TODO: remove this dummy testing player
             GameManager.Instance.SpawnPlayer(400, 300, 3, 10, 5);
@@ -31,6 +33,12 @@ namespace customfinal
                 GameManager.Instance.BarrierManager.SpawnBarrierRandomPos();
                 
                 barriersToSpawn--;
+            }
+            int powerUpsToSpawn = 1;
+            while (powerUpsToSpawn > 0)
+            {
+                GameManager.Instance.PowerUpManager.SpawnPowerUp(100, 200, 0);
+                powerUpsToSpawn--;
             }
         }
 

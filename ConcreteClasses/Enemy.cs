@@ -20,7 +20,7 @@ namespace customfinal.ConcreteClasses
         {
             _speed = speed;
             _healthPool = new HealthPool(maxHp, maxHp);
-            _damage = damage;
+            Damage = damage;
         }
         public override void Draw()
         {
@@ -72,5 +72,6 @@ namespace customfinal.ConcreteClasses
         }
 
         public bool IsDestroyed { get => _isDestroyed; set => _isDestroyed = value; }
+        public int Damage { get => _damage; set => _damage = value; }
     }
 }

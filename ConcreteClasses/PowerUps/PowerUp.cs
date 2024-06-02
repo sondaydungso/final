@@ -1,17 +1,16 @@
 ﻿using customfinal.Common;
-using customfinal.ConcreteClasses;
+using customfinal.Managers;
 using SplashKitSDK;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace customfinal.ConcreteClasses.PowerUps
 {
     public class PowerUp : GameObject
     {
         private Bitmap _bitmap;
+        private bool isDestroyed = false;
+
+        public bool IsDestroyed { get => isDestroyed; set => isDestroyed = value; }
+
         public PowerUp(string name, Bitmap bitmap, float x, float y) : base(name, bitmap, x, y)
         {
             _bitmap = bitmap;
@@ -22,7 +21,7 @@ namespace customfinal.ConcreteClasses.PowerUps
         }
         public override void DestroySelf()
         {
-
+            GameManager.Instance.PowerUpManager.KillPowerUp(this);
         }
         public virtual void ApplyPowerUp(Player player)
         {

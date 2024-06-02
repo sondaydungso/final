@@ -24,6 +24,10 @@ namespace customfinal.ConcreteClasses.PowerUps
             player.Speed += _amount;
 
         }
+        public override void DestroySelf()
+        {
+            base.DestroySelf();
+        }
 
 
     }

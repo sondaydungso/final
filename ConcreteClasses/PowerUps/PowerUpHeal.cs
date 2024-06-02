@@ -21,7 +21,10 @@ namespace customfinal.ConcreteClasses.PowerUps
         {
             player.HealthPool.Heal(_amount);
         }
-
+        public override void DestroySelf()
+        {
+            base.DestroySelf();
+        }
 
     }
 
