@@ -19,7 +19,7 @@ namespace customfinal.ConcreteClasses.PowerUps
         }
         public override void ApplyPowerUp(Player player)
         {
-            player.Damage += player.Damage + 1;
+            player.Damage += 1;
         }
         public override void DestroySelf()
         {

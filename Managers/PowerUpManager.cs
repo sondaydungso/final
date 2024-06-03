@@ -7,6 +7,7 @@ namespace customfinal.Managers
     public class PowerUpManager
     {
         private List<PowerUp> _powerUps;
+        
         private int _framesUntilSpawn = 300;
         private int _framesLeftUntilSpawn = 300;
 
@@ -23,7 +24,7 @@ namespace customfinal.Managers
             int x = random.Next(0, Constants.GameWindow.Width);
             int y = random.Next(0, Constants.GameWindow.Height);
             int powerUpType = random.Next(0, 3); //  there are 3 types of power-ups (0 for heal, 1 for speed boost, 2 for damage boost )
-            
+
             PowerUp powerUp;
             switch (powerUpType)
             {
@@ -44,11 +45,13 @@ namespace customfinal.Managers
             {
                 _powerUps.Add(powerUp);
             }
-           
+            //TODO: implement factory pattern for powerups
+
+
         }
         public void SpawnPowerUp(float x, float y, int powerUpType) // there are 3 types of power-ups (0 for heal, 1 for speed boost, 2 for damage boost )
         {
-           if (powerUpType == 0)
+            if (powerUpType == 0)
             {
                 PowerUp powerUp = new PowerUpHeal("PowerUpHeal", SplashKit.BitmapNamed("PowerUpHeal"), x, y);
                 _powerUps.Add(powerUp);
