@@ -59,10 +59,10 @@ namespace customfinal.Managers
         {
             barrier.IsDestroyed = true;
         }
-        public void Clearbarriers(Barrier b)
-        {
-            _barriers.Remove(b);
-        }
+        //public void Clearbarriers(Barrier b)
+        //{
+        //    _barriers.Remove(b);
+        //}
 
 
     }

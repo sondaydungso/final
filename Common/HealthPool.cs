@@ -22,7 +22,6 @@ namespace customfinal.Common
         }
         public int MaxHealth
         {
-
             set { _maxHealth = value; }
         }
         public void TakeDamage(int damage)

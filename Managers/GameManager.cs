@@ -197,7 +197,7 @@ namespace customfinal.Managers
         {
             SplashKit.ClearScreen();
             SplashKit.DrawText("Game Over", Color.Black, Constants.GameWindow.Width / 2 - 50, Constants.GameWindow.Height / 2);
-            SplashKit.DrawText("Press space to play again", Color.Black, Constants.GameWindow.Width / 2 - 50, Constants.GameWindow.Height / 2 + 200);
+            SplashKit.DrawText("Press space to play again", Color.Black, Constants.GameWindow.Width / 2 - 100, Constants.GameWindow.Height / 2 + 100);
             SplashKit.RefreshScreen();
         }
 

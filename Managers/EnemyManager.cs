@@ -30,7 +30,7 @@ namespace customfinal.Managers
             _enemies.Add(enemy);
         }
 
-        //kill off everything and de-reference it from GameManager so that garbage collection can do the cleaning
+        //kill off everything to restart the game
         public void ClearAllEnemies()
         {
             _enemies.Clear();
@@ -73,9 +73,9 @@ namespace customfinal.Managers
             enemy.IsDestroyed = true;
         }
 
-        public void ClearEnemy(Enemy enemy)
-        {
-            _enemies.Remove(enemy);
-        }
+        //public void ClearEnemy(Enemy enemy)
+        //{
+        //    _enemies.Remove(enemy);
+        //}
     }
 }
