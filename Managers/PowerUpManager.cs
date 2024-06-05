@@ -100,10 +100,7 @@ namespace customfinal.Managers
         {
             powerUp.IsDestroyed = true;
         }
-        //public void ClearPowerUp(PowerUp powerUp)
-        //{
-        //    _powerUps.Remove(powerUp);
-        //}
+       
 
 
     }

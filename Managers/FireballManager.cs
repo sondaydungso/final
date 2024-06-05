@@ -59,9 +59,6 @@ namespace customfinal.Managers
             fireball.IsDestroyed = true;
         }
 
-        //public void ClearFireball(Fireball fireball)
-        //{
-        //    _fireballs.Remove(fireball);
-        //}
+        
     }
 }

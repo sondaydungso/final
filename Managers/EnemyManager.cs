@@ -73,9 +73,6 @@ namespace customfinal.Managers
             enemy.IsDestroyed = true;
         }
 
-        //public void ClearEnemy(Enemy enemy)
-        //{
-        //    _enemies.Remove(enemy);
-        //}
+        
     }
 }
