@@ -25,6 +25,7 @@ namespace customfinal.Managers
             Barrier barrier = new Barrier("Barrier", SplashKit.BitmapNamed("Barrier"), x, y, 20);
             _barriers.Add(barrier);
         }
+        //draw all barriers
         public void DrawAllBarriers()
         {
             foreach (Barrier barrier in _barriers)
@@ -32,6 +33,7 @@ namespace customfinal.Managers
                 barrier.Draw();
             }
         }
+        //spawn more barriers
         public void SpawnMore()
         {
             Random random = new Random();
@@ -47,14 +49,17 @@ namespace customfinal.Managers
             }
 
         }
+        //clear all barriers
         public void ClearAllBarriers()
         {
             _barriers.Clear();
         }
+        //clear all destroyed barriers
         public void ClearAllDestroyedBarriers()
         {
             _barriers.RemoveAll(barrier => barrier.IsDestroyed);
         }
+        //kill a barrier
         public void KillBarrier(Barrier barrier)
         {
             barrier.IsDestroyed = true;

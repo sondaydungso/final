@@ -16,7 +16,7 @@ namespace customfinal.Managers
         public EnemyManager()
         {
         }
-
+        //spawn enemy at random position
         public void SpawnEnemyRandomPos()
         {
             Enemy enemy = new Enemy("enemy", SplashKit.BitmapNamed("Enemy"), SplashKit.Rnd(0, 800), SplashKit.Rnd(0, 600), _enemySpeed, _enemyDamage, _enemyMaxHp);
@@ -36,11 +36,13 @@ namespace customfinal.Managers
             _enemies.Clear();
         }
 
+        //delete all enemies that are destroyed
         public void ClearAllDestroyedEnemies()
         {
             _enemies.RemoveAll(enemy => enemy.IsDestroyed);
         }
 
+        //draw all enemies
         public void DrawAllEnemies()
         {
             foreach (Enemy enemy in _enemies)
@@ -48,6 +50,8 @@ namespace customfinal.Managers
                 enemy.Draw();
             }
         }
+
+        //move all enemies
         public void MoveAllEnemies()
         {
             foreach (Enemy enemy in _enemies)
@@ -55,6 +59,8 @@ namespace customfinal.Managers
                 enemy.Move();
             }
         }
+
+        //spawn more enemies
         public void SpawnMore()
         {
             Random random = new Random();
@@ -68,6 +74,7 @@ namespace customfinal.Managers
             }
         }
 
+        //kill an enemy
         public void KillEnemy(Enemy enemy)
         {
             enemy.IsDestroyed = true;

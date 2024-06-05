@@ -18,6 +18,7 @@ namespace customfinal.Managers
             _powerUps = new List<PowerUp>();
         }
 
+        //spawn power up at random position
         public void SpawnPowerUpRandomPos()
         {
             Random random = new Random();
@@ -45,10 +46,11 @@ namespace customfinal.Managers
             {
                 _powerUps.Add(powerUp);
             }
-            //TODO: implement factory pattern for powerups
+            
 
 
         }
+        //spawn power up at a position
         public void SpawnPowerUp(float x, float y, int powerUpType) // there are 3 types of power-ups (0 for heal, 1 for speed boost, 2 for damage boost )
         {
             if (powerUpType == 0)
@@ -67,6 +69,7 @@ namespace customfinal.Managers
                 _powerUps.Add(powerUp);
             }
         }
+        //check if player collides with power up
         public void SpawnMore()
         {
             if (_framesLeftUntilSpawn > 0)
@@ -81,6 +84,7 @@ namespace customfinal.Managers
             }
 
         }
+        //draw all power ups
         public void DrawAllPowerUps()
         {
             foreach (PowerUp powerUp in _powerUps)
@@ -88,14 +92,17 @@ namespace customfinal.Managers
                 powerUp.Draw();
             }
         }
+        //kill off everything to restart the game
         public void ClearAllPowerUps()
         {
             _powerUps.Clear();
         }
+        //delete all power ups that are destroyed
         public void ClearAllDestroyedPowerUps()
         {
             _powerUps.RemoveAll(powerUp => powerUp.IsDestroyed);
         }
+        //kill a power up
         public void KillPowerUp(PowerUp powerUp)
         {
             powerUp.IsDestroyed = true;

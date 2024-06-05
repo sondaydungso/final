@@ -14,24 +14,13 @@ namespace customfinal.Managers
         public FireballManager()
         {
         }
-
+        //spawn fireball at a position
         public void SpawnFireball(float x, float y, float directionX, float directionY, int damage)
         {
             Fireball fireball = new Fireball("fireball", SplashKit.BitmapNamed("Fireball"), x, y, _fireballSpeed, directionX, directionY, damage);
             _fireballs.Add(fireball);
         }
-
-        //kill off everything and de-reference it from GameManager so that garbage collection can do the cleaning
-        public void ClearAllFireballs()
-        {
-            _fireballs.Clear();
-        }
-
-        public void ClearAllDestroyedFireballs()
-        {
-            _fireballs.RemoveAll(fireball => fireball.IsDestroyed);
-        }
-
+        // draw fireballs
         public void DrawAllFireballs()
         {
             foreach (Fireball fireball in _fireballs)
@@ -42,7 +31,19 @@ namespace customfinal.Managers
                 }
             }
         }
+        //kill off everything 
+        public void ClearAllFireballs()
+        {
+            _fireballs.Clear();
+        }
 
+        //delete all fireballs that are destroyed
+        public void ClearAllDestroyedFireballs()
+        {
+            _fireballs.RemoveAll(fireball => fireball.IsDestroyed);
+        }
+
+        //move all fireballs
         public void MoveAllFireballs()
         {
             foreach (Fireball fireball in _fireballs)
@@ -53,7 +54,7 @@ namespace customfinal.Managers
                 }
             }
         }
-
+        //kill a fireball
         public void KillFireball(Fireball fireball)
         {
             fireball.IsDestroyed = true;
